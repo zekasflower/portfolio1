@@ -1,0 +1,40 @@
+.about-me {@apply pt-5 xl:pt-10;
+  .main-info {
+    @apply flex gap-x-5 xl:gap-x-10 mb-8 xl:mb-12 2xl:mb-16;
+    .image {@apply bg-dark rounded overflow-hidden w-2/5;
+      img {@apply h-[27.5rem] xl:h-[30rem] w-full object-cover }
+    }
+    .content { @apply mt-7 xl:mt-11 2xl:mt-16 w-3/5;
+      h1 {@apply text-4xl 2xl:text-5xl font-bold mb-2 2xl:mb-5 text-gold}
+      p {@apply text-xl 2xl:text-2xl leading-relaxed}
+    }
+  }
+
+  h2 {@apply font-bold text-4xl 2xl:text-5xl text-gold mb-4 2xl:mb-8}
+
+  .techs-info {
+    @apply bg-white py-8 2xl:py-14 text-center;
+
+    .section {
+      &.preferred-section {@apply mb-5 2xl:mb-7}
+      h3 {@apply font-normal text-2xl 2xl:text-3xl mb-2.5 2xl:mb-5}
+      h4 {@apply text-xl 2xl:text-2xl mb-3}
+      ul {
+        @apply flex items-center justify-center gap-x-5 xl:gap-x-7;
+        li {
+          img {@apply w-11 xl:w-14}
+        }
+      }
+    }
+    
+  }
+  .additional-info {
+    @apply py-8 2xl:py-14 w-[700px] xl:w-[800px] mx-auto;
+    h2 {@apply text-center}
+    p {@apply text-lg mb-5}
+    a {@apply text-gold font-bold underline}
+    blockquote {
+      @apply text-lg 2xl:text-xl text-justify italic leading-relaxed
+    }
+  }
+}

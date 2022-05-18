@@ -1,0 +1,60 @@
+.client-reviews {
+  .sites-rate {
+    @apply bg-white py-10 2xl:py-14;
+    .container {
+      @apply flex items-center justify-evenly gap-x-5 2xl:gap-x-10; 
+      .box {
+        @apply flex items-center gap-x-5 2xl:gap-x-8;
+        h2 {
+          @apply text-6xl 2xl:text-7xl font-semibold mb-2 2xl:mb-3 text-center;
+          span {@apply text-base font-normal}
+        }
+        ul {@apply flex items-center text-2xl}
+        &.upwork img { @apply w-36 2xl:w-48 }
+        &.freelancer img { @apply w-20 2xl:w-28 }
+      }
+    }
+  }
+
+  .testimonials {
+    @apply relative min-h-screen py-10 text-center pb-[50vh];
+    .testimonials-slides {
+      .testimonial-slide {
+        blockquote {
+          @apply text-center text-xl 2xl:text-2xl;
+          .icon {
+            @apply inline-block text-4xl 2xl:text-5xl mb-5 text-[#9ac5db]
+          }
+          .content {
+            @apply w-[650px] 2xl:w-[800px] mx-auto italic font-normal leading-relaxed h-44 2xl:h-56 flex items-center justify-center mb-5
+          }
+          footer {
+            img {@apply mx-auto w-11 h-11 2xl:w-14 2xl:h-14 rounded-full object-cover mb-2}
+          }
+        }
+      }
+    }
+    .back-img {
+      @apply absolute bottom-10 left-[52%] -translate-x-1/2 h-[30vh] 2xl:h-[40vh]
+    }
+  }
+}
+
+.swiper-button-next {
+  all: reset;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  @apply bottom-1 top-[initial];
+  &::after {@apply font-['Fira_Sans'] text-lg 2xl:text-2xl text-gold}
+}
+
+.swiper-button-prev {
+  @apply left-[calc(50%-9rem)] 2xl:left-[calc(50%-11.5rem)];
+  &::after {@apply content-['Previous_Testimonial'] text-right}
+}
+
+.swiper-button-next {
+  @apply right-[calc(50%-9rem)] 2xl:right-[calc(50%-11.5rem)];
+  &::after {@apply content-['Next_Testimonial'] text-left}
+}
